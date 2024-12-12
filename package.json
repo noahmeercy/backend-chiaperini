@@ -1,0 +1,19 @@
+{
+  "name": "backend-chiaperini",
+  "version": "1.0.0",
+  "description": "Este repositório irei desenvolver o backend da minha aplicação principal, tudo em forma de estudo.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "prisma": "^6.0.1"
+  }
+}
