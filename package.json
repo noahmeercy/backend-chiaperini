@@ -1,0 +1,26 @@
+{
+  "name": "backend-chiaperini",
+  "version": "1.0.0",
+  "description": "Este repositório irei desenvolver o backend da minha aplicação principal, tudo em forma de estudo.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahmeercy/backend-chiaperini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahmeercy/backend-chiaperini/issues"
+  },
+  "homepage": "https://github.com/noahmeercy/backend-chiaperini#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
