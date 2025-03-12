@@ -19,3 +19,15 @@ model User {
   name    String
   password String
 }
+
+model CadastroFicha {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  name             String   
+  registro         Int     @unique
+  funcao           String?
+  Setor            String
+  UniformeCamisa   String?
+  UniformeCalca    String?
+  UniformeCalcado  String?
+  Admissao         DateTime @default(now())
+}
