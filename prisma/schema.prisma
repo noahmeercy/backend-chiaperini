@@ -1,5 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// This isyourPrismaschemafile,
+//learnmoreaboutitinthedocs: https://pris.ly/d/prisma-schema
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
@@ -20,14 +20,14 @@ model User {
   password String
 }
 
-model CadastroFicha {
+model Ficha{
   id               String   @id @default(auto()) @map("_id") @db.ObjectId
-  name             String   
+  nome             String   
   registro         Int     @unique
-  funcao           String?
-  Setor            String
-  UniformeCamisa   String?
-  UniformeCalca    String?
-  UniformeCalcado  String?
-  Admissao         DateTime @default(now())
+  cargo           String?
+  setor       String
+  camisa   String?
+  calca    String?
+  calcado  Int?
+  admissao String
 }
