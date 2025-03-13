@@ -7,11 +7,13 @@ const prisma = new PrismaClient()
 
 // 📌 Rota privada para cadastrar uma ficha de funcionário
 
-router.post("/cadastro-ficha", async (req, res) => {
+router.post('/cadastro-ficha', async (req, res) => {
+    // console.log("🚀 Rota cadastro-ficha foi chamada!") -- depuração (debug).
+
     try {
         const {nome, registro, cargo, setor, camisa, calca, calcado, admissao,} = req.body;
 
-        const novaFicha = await prisma.Ficha.create({
+        const novaFicha = await prisma.ficha.create({
             data: {
                nome,
                registro,
@@ -20,8 +22,7 @@ router.post("/cadastro-ficha", async (req, res) => {
                camisa,
                calca,
                calcado,
-               admissao,
-               
+               admissao, 
             }
         })
         res.status(201).json(novaFicha)
