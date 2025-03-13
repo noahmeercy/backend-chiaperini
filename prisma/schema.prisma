@@ -22,12 +22,12 @@ model User {
 
 model Ficha{
   id               String   @id @default(auto()) @map("_id") @db.ObjectId
-  nome             String   
-  registro         Int     @unique
+  nome             String?  
+  registro         String?     @unique
   cargo           String?
-  setor       String
+  setor       String?
   camisa   String?
   calca    String?
-  calcado  Int?
-  admissao String
+  calcado  String?
+  admissao String?
 }
