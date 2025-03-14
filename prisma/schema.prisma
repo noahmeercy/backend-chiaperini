@@ -22,12 +22,20 @@ model User {
 
 model Ficha{
   id               String   @id @default(auto()) @map("_id") @db.ObjectId
-  nome             String?  
-  registro         String?     @unique
+  nome             String  
+  registro         String     @unique
   cargo           String?
-  setor       String?
+  setor       String
   camisa   String?
   calca    String?
   calcado  String?
-  admissao String?
+  admissao String
+}
+
+model Epi{
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  codigo             String  
+  descricao        String     
+  ca           String  
+ 
 }
