@@ -32,7 +32,7 @@ const prisma = new PrismaClient();
 router.post("/trocar-epi", async (req, res) => {
   console.log("🚀 Rota trocar-epi foi chamada!");
   try {
-    const { registro, codigo, motivo, dataTroca } = req.body;
+    const { registro, codigo, motivo, quantidade, dataTroca } = req.body;
 
     // Verifica se o funcionário existe
     const funcionario = await prisma.ficha.findUnique({
@@ -63,6 +63,7 @@ router.post("/trocar-epi", async (req, res) => {
           connect: { id: epi.id }, // Aqui usamos o id do EPI encontrado
         },
         motivo,
+        quantidade,
         dataTroca: dataTroca ? new Date(dataTroca) : undefined, // Certifique-se de enviar uma data válida
       },
     });
@@ -75,5 +76,6 @@ router.post("/trocar-epi", async (req, res) => {
     res.status(500).json({ message: "Falha no Servidor" });
   }
 });
+
 
 export default router;
