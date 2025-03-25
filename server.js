@@ -4,6 +4,7 @@ import privateRoutes from './routes/private.js'
 import fichaRoutes from './routes/CadastroFicha.js'
 import epiRoutes from './routes/CadastroEpi.js'
 import trocaRoutes from './routes/TrocarEpi.js'
+import testeRoutes from './routes/teste.js'
 import cors from 'cors'
 import auth from './middlewares/auth.js'
 
@@ -16,6 +17,7 @@ app.use(express.json())
 // 🔓 Rotas públicas
 app.use('/', publicRoutes)
 app.use('/', trocaRoutes)
+app.use('/', testeRoutes)
 
 
 app.use('/private', epiRoutes)
