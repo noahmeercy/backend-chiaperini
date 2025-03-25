@@ -48,5 +48,6 @@ model trocaEpi {
   epi           Epi      @relation(fields: [epiId], references: [id], onDelete: Cascade) // 🔥 Se um EPI for deletado, as trocas dele são apagadas
   epiId         String   @db.ObjectId
   motivo        String
+  quantidade    String
   dataTroca     DateTime @default(now())
 }
