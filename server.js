@@ -5,6 +5,7 @@ import fichaRoutes from './routes/CadastroFicha.js'
 import epiRoutes from './routes/CadastroEpi.js'
 import trocaRoutes from './routes/TrocarEpi.js'
 import tabelaRoutes from './routes/TabelaTroca.js'
+import filtroTrocas from './routes/filtroTrocas.js'
 import cors from 'cors'
 import auth from './middlewares/auth.js'
 
@@ -18,6 +19,7 @@ app.use(express.json())
 app.use('/', publicRoutes)
 app.use('/', trocaRoutes)
 app.use('/', tabelaRoutes)
+app.use('/', filtroTrocas)
 
 
 app.use('/private', epiRoutes)
