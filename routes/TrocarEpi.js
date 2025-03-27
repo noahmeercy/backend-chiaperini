@@ -64,7 +64,7 @@ router.post("/trocar-epi", async (req, res) => {
         },
         motivo,
         quantidade,
-        dataTroca: dataTroca ? new Date(dataTroca) : undefined, // Certifique-se de enviar uma data válida
+        dataTroca: dataTroca ? new Date(`${dataTroca}T12:00:00`) : undefined, // Certifique-se de enviar uma data válida
       },
     });
  
