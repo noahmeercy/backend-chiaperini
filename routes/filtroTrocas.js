@@ -5,10 +5,10 @@ const router = express.Router();
 const prisma = new PrismaClient();
 
 router.get("/filtro-troca", async (req, res) => {
-  console.log("🚀 Rota filtro-troca foi chamada!");
+  // console.log("🚀 Rota filtro-troca foi chamada!");
 
   try {
-    let { dataInicio, dataFim } = req.query;
+    const { dataInicio, dataFim } = req.query;
     
 
     //  Definir as datas corretamente com horário completo
